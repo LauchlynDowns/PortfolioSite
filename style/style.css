@@ -10,6 +10,9 @@ body {
     margin: 0;
     padding: 0;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 /*resets for links*/
 a {
@@ -26,17 +29,18 @@ a:visited {
     color: inherit;
     text-decoration: none;
 }
+a:active {
+    color: white;
+    text-decoration: none;
+}
+.page{
+    height: 100vh;
+    max-height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    border-top: 1px solid white;
+}
 
-.homepage{
-    height: 100vh;
-    width: 100%;
-    background-color: yellow;
-}
-.aboutpage{
-    height: 100vh;
-    width: 100%;
-    background-color: blue;
-}
 
 .navbar-area {
     position: fixed;
@@ -65,7 +69,6 @@ a:visited {
     font-size: 2.5vh;
     display: flex;
     justify-content: flex-start;
-
 }
 
 .navbar-text:last-child {
