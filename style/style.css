@@ -2,6 +2,25 @@
 
 /*fonts*/
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=PT+Serif&display=swap');
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #6f6f6f #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #6f6f6f;
+    border-radius: 10px;
+    border: 3px none #ffffff;
+}
 
 
 body {
@@ -10,7 +29,8 @@ body {
     margin: 0;
     padding: 0;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
 
@@ -29,16 +49,20 @@ a:visited {
     color: inherit;
     text-decoration: none;
 }
+
 a:active {
     color: white;
     text-decoration: none;
 }
-.page{
+
+.page {
     height: 100vh;
     max-height: 100vh;
     width: 100%;
     max-width: 100%;
-    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    /*REMOVE LATER!*/
+    display: flex;
 }
 
 
@@ -55,7 +79,7 @@ a:active {
     flex-direction: row;
     justify-content: space-between;
     background-color: rgba(36, 36, 36, 0.5);
-    
+
 }
 
 .navbar-text {
@@ -80,4 +104,78 @@ a:active {
 
 .navbar-text:last-child a {
     margin-right: 1.5vw;
+}
+
+
+.codeshape {
+    clip-path: polygon(0 0, 59% 36%, 100% 100%, 0% 100%);
+    background-image: url("../images/code-background.png");
+    background-size: 70vw;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 70vw;
+}
+
+.intro {
+    height: 100vh;
+    width: 50vw;
+}
+
+.introtext {
+    height: 40vh;
+    width: 49.6vw;
+    margin-bottom: 10vh;
+    margin-left: 10vw;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.toptext {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 8vh;
+    color: #cccccc;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.middletext {
+    font-size: 8vh;
+    color: #555454;
+    border: 0;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-left: 5vw;
+    font-family: 'PT Serif', serif;
+}
+
+.bottomtext {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 5vh;
+    color: #C2C2C2;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-left: 10vw;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 50vw;
+    height: 10vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
