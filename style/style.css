@@ -121,8 +121,8 @@ i:hover {
 
 .codeshape {
     clip-path: polygon(0 0, 59% 36%, 100% 100%, 0% 100%);
-    background-image: url("../images/code-background.png");
-    background-size: 70vw;
+    background-image:url("../images/pexels-photo-330771.jpeg");
+    
     background-repeat: no-repeat;
     height: 100vh;
     width: 70vw;
@@ -155,6 +155,7 @@ i:hover {
     border: 0;
     padding: 0;
     margin: 0;
+    
 }
 
 .middletext {
@@ -244,14 +245,17 @@ i:hover {
     height: 40vh;
     background-repeat: no-repeat;
     background-position: center;
-    background-size:contain;
- 
-    
-    
+    background-size: contain;
+
+
+
 
 }
 
 
+.shadow {
+    text-shadow:1px 1px black;
+}
 /*responsive navbar*/
 
 @media only screen and (max-width: 1200px) {
@@ -266,7 +270,7 @@ i:hover {
 
     .codeshape {
         width: 200vw;
-        background-size: 110vh;
+        background-size: 200vh;
     }
 
     .introtext {
@@ -283,7 +287,9 @@ i:hover {
         color: white;
     }
 
-    .middletext, .bottomtext, .toptext {
+    .middletext,
+    .bottomtext,
+    .toptext {
         margin-left: 10vw;
     }
 
@@ -296,7 +302,7 @@ i:hover {
         flex-direction: column;
         margin-top: 10vh;
         margin-bottom: 0vh;
-       
+
     }
 
     .about-photo-area {
@@ -321,12 +327,8 @@ i:hover {
         min-height: 30vh;
         width: 40vw;
         min-width: 40vw;
-        
-       
+
+
     }
-
-
-
-
 
 }
