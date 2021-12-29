@@ -29,6 +29,7 @@ body {
     border: 0;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 html {
@@ -92,7 +93,7 @@ i:hover {
     flex-direction: row;
     justify-content: space-between;
     background-color: rgba(36, 36, 36, 0.5);
-    z-index: 1;
+
 }
 
 .navbar-text {
@@ -108,6 +109,7 @@ i:hover {
     justify-content: flex-start;
 }
 
+
 .navbar-text:last-child {
     margin-left: auto;
     display: flex;
@@ -116,13 +118,13 @@ i:hover {
 }
 
 .navbar-text:last-child a {
-    margin-right: 1.5vw;
+    margin-left: 1.5vw;
 }
 
 .codeshape {
     clip-path: polygon(0 0, 59% 36%, 100% 100%, 0% 100%);
-    background-image:url("../images/pexels-photo-330771.jpeg");
-    
+    background-image: url("../images/pexels-photo-330771.jpeg");
+
     background-repeat: no-repeat;
     height: 100vh;
     width: 70vw;
@@ -131,6 +133,7 @@ i:hover {
 .intro {
     height: 100vh;
     width: 50vw;
+    max-width: 50vw;
 
 }
 
@@ -144,8 +147,6 @@ i:hover {
     right: 0;
     display: flex;
     flex-direction: column;
-
-
 }
 
 .toptext {
@@ -155,7 +156,7 @@ i:hover {
     border: 0;
     padding: 0;
     margin: 0;
-    
+
 }
 
 .middletext {
@@ -254,9 +255,188 @@ i:hover {
 
 
 .shadow {
-    text-shadow:1px 1px black;
+    text-shadow: 1px 1px black;
 }
-/*responsive navbar*/
+
+.projectscontainer {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+
+.project-holder {
+    width: 100vw;
+    height: 80vh;
+    min-width: 100vw;
+    display: flex;
+    overflow: hidden;
+}
+
+.project-selector {
+    width: 80vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    scroll-behavior: smooth;
+
+}
+
+.project-selector-overlay {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 100%);
+    width: 80vw;
+    height: 18vh;
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+
+}
+
+.project-selector-overlay-button-container {
+    position: relative;
+    width: 100%;
+    height: 25%;
+    margin-top: 8vh;
+    pointer-events: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+.project-selector-left-arrow, .project-selector-right-arrow{
+color: #ffffff;
+font-size:4.5vh;
+pointer-events:auto;
+cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+.project-selector {
+    scrollbar-width: auto;
+    scrollbar-color: #525252 #0b0b0b;
+}
+
+/* Chrome, Edge, and Safari */
+.project-selector::-webkit-scrollbar {
+    width: 16px;
+}
+
+.project-selector::-webkit-scrollbar-track {
+    background: #0b0b0b;
+}
+
+.project-selector::-webkit-scrollbar-thumb {
+    background-color: #525252;
+    border-radius: 0px;
+    border: 0px solid #0b0b0b;
+}
+
+.project-selector-pane {
+    width: 20vw;
+    height: 20vh;
+    max-width: 20vw;
+    max-height: 20vh;
+    min-width: 20vw;
+    min-height: 20vh;
+    overflow: none;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.project-info-area {
+
+    height: 100%;
+    width: 40vw;
+
+}
+
+.project-images-area {
+    height: 100%;
+    width: 60vw;
+
+}
+
+.project-selector-pane-logo-container {
+    background-color: #2b2b2b;
+    height: 60%;
+    width: 60%;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    border: 1px solid white;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    cursor: pointer;
+    font-family: 'pt-sans', sans-serif;
+}
+
+
+.screenshot-container {
+    display: grid;
+    grid-template-columns: repeat(3, 33.333%);
+    grid-template-rows: 40vh 35%;
+    grid-column-gap: 35px;
+    grid-row-gap: 28px;
+    margin-top: 10%;
+    width: 40vw;
+    margin: 10%;
+
+}
+
+.large-screenshot {
+    grid-area: 1 / 1 / 2 / 4;
+    background-color: blue;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images//BwmMusicThumb.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.small-screenshot-1 {
+    grid-area: 2 / 1 / 3 / 2;
+    background-color: yellow;
+    width: 100%;
+    height: 100%;
+}
+
+.small-screenshot-2 {
+    grid-area: 2 / 2 / 3 / 3;
+    background-color: brown;
+    width: 100%;
+    height: 100%;
+}
+
+.small-screenshot-3 {
+    grid-area: 2 / 3 / 3 / 4;
+    background-color: green;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+/*responsive code*/
 
 @media only screen and (max-width: 1200px) {
     .navbar-link {
