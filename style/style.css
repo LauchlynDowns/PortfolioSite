@@ -10,15 +10,18 @@
     background-color: #F0DB4F;
     color: black;
 }
+
 .red {
-    background-color:#E34C26;
-    color: white;
+    background-color: #E34C26;
+    color: black;
 }
-.darkblue{
+
+.darkblue {
     background-color: #224DE4;
     color: white;
 }
-.lightblue{
+
+.lightblue {
     background-color: #0868AC;
     color: white;
 }
@@ -62,7 +65,7 @@ a {
 }
 
 a:hover {
-    color: inherit;
+    color: white;
     text-decoration: none;
 }
 
@@ -111,7 +114,7 @@ i:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: rgba(36, 36, 36, 0.5);
+    z-index: 100;
 
 }
 
@@ -121,29 +124,55 @@ i:hover {
     font-family: 'PT Sans', sans-serif;
     width: 50vw;
     height: auto;
-    padding-left: 2vw;
-    padding-top: 1.5vh;
     font-size: 2.5vh;
     display: flex;
     justify-content: flex-start;
 }
 
+.navbar-text:first-child {
+    padding-top: 2vh;
+    padding-left: 2vw;
+}
 
 .navbar-text:last-child {
     margin-left: auto;
     display: flex;
     justify-content: flex-end;
     padding-right: 2vw;
+    padding-top: 2vh;
+    
 }
 
 .navbar-text:last-child a {
     margin-left: 1.5vw;
+    margin-right: 0.5vw;
+}
+
+.navbar-holder {
+    background-color: rgb(85, 84, 84);
+    height: 6vh;
+    border-radius: 6vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: rgb(201, 201, 201);
+}
+
+.last-link {
+    padding-right: 1vw;
+}
+
+.navbar-link {
+    position: relative;
+    top: 4.3vh;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    margin: 0;
 }
 
 .codeshape {
     clip-path: polygon(0 0, 59% 36%, 100% 100%, 0% 100%);
     background-image: url("../images/pexels-photo-330771.jpeg");
-
     background-repeat: no-repeat;
     height: 100vh;
     width: 70vw;
@@ -279,7 +308,7 @@ i:hover {
 
 .projectscontainer {
     width: 100vw;
-   height: 100vh;
+    height: 100vh;
     background-color: black;
 }
 
@@ -414,12 +443,14 @@ i:hover {
     padding-right: 2%;
     padding-top: 0.5%;
     padding-bottom: 0.5%;
-    border-radius:25px;
+    border-radius: 25px;
 }
+
 .techusedcontainer-tech-bubbles {
-display: flex;
-gap: 2%;
+    display: flex;
+    gap: 2%;
 }
+
 .project-images-area {
     height: 100%;
     width: 60vw;
@@ -488,18 +519,16 @@ gap: 2%;
 }
 
 
+
+
+
 /*responsive code*/
 
 @media only screen and (max-width: 1200px) {
-    .navbar-link {
+    
+    .navbar-hideable{
         display: none;
     }
-
-    /*show hamburger menu in mobile mode*/
-    .hamburger-menu {
-        display: block;
-    }
-
     .codeshape {
         width: 200vw;
         background-size: 200vh;
@@ -562,28 +591,34 @@ gap: 2%;
 
 
     }
-.project-holder{
-    flex-direction: column;
-    
-}
-.project-info-area{
-    width: 90%;
-    height: max-content;
-}
-.project-images-area{
-    width: 100%;
-    height: max-content;
-    margin: 0;
-    padding: 0;  
-    margin-bottom: 30%;
-}
-.screenshot-container{
-    width: 70%;
-}
-.projectscontainer{
-    height: max-content;
-}
-.project-holder{
-    height: max-content;
-}
+
+    .project-holder {
+        flex-direction: column;
+
+    }
+
+    .project-info-area {
+        width: 90%;
+        height: max-content;
+    }
+
+    .project-images-area {
+        width: 100%;
+        height: max-content;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 30%;
+    }
+
+    .screenshot-container {
+        width: 70%;
+    }
+
+    .projectscontainer {
+        height: max-content;
+    }
+
+    .project-holder {
+        height: max-content;
+    }
 }
