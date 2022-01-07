@@ -25,7 +25,19 @@
     background-color: #0868AC;
     color: white;
 }
+.grey {
+    background-color: gray;
+    color: black;
+}
 
+.phppurple {
+    background-color: #4f5b93;
+    color: white;
+}
+.sqlorange{
+    background-color: #b45e00;
+    color: white;
+}
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
 * {
@@ -140,7 +152,7 @@ i:hover {
     justify-content: flex-end;
     padding-right: 2vw;
     padding-top: 2vh;
-    
+
 }
 
 .navbar-text:last-child a {
@@ -444,12 +456,12 @@ i:hover {
     padding-top: 0.5%;
     padding-bottom: 0.5%;
     border-radius: 25px;
+    display: inline-block;
+    margin: 1%;
+    
 }
 
-.techusedcontainer-tech-bubbles {
-    display: flex;
-    gap: 2%;
-}
+
 
 .project-images-area {
     height: 100%;
@@ -488,34 +500,39 @@ i:hover {
 
 .large-screenshot {
     grid-area: 1 / 1 / 2 / 4;
-    background-color: blue;
     width: 100%;
     height: 100%;
-    background-image: url(../images//BwmMusicThumb.JPG);
-    background-size: cover;
+    background-position: center;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
 .small-screenshot-1 {
     grid-area: 2 / 1 / 3 / 2;
-    background-color: yellow;
     width: 100%;
     height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .small-screenshot-2 {
     grid-area: 2 / 2 / 3 / 3;
-    background-color: brown;
     width: 100%;
     height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .small-screenshot-3 {
     grid-area: 2 / 3 / 3 / 4;
-    background-color: green;
     width: 100%;
     height: 100%;
     position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
@@ -525,10 +542,11 @@ i:hover {
 /*responsive code*/
 
 @media only screen and (max-width: 1200px) {
-    
-    .navbar-hideable{
+
+    .navbar-hideable {
         display: none;
     }
+
     .codeshape {
         width: 200vw;
         background-size: 200vh;
@@ -612,6 +630,7 @@ i:hover {
 
     .screenshot-container {
         width: 70%;
+        
     }
 
     .projectscontainer {
@@ -621,4 +640,25 @@ i:hover {
     .project-holder {
         height: max-content;
     }
+    .project-selector{
+        width: 100%;
+        margin-left: 0;
+        padding-left: 0;
+    }
+    .project-selector-overlay{
+        width: 100%;
+        margin-left: 0px;
+        padding-left: 0;
+    }
+    .project-selector-pane {
+        width: 40vw;
+        min-width: 50vw;
+    }
+    .project-selector-overlay{
+        display: none;
+    }
 }
+
+
+
+
