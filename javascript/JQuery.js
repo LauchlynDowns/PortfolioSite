@@ -35,7 +35,7 @@ SecondImage.style.backgroundImage = BWMMusicProject[4];
 ThirdImage.style.backgroundImage = BWMMusicProject[5];
 FourthImage.style.backgroundImage = BWMMusicProject[6];
 
-
+let CurrentPortfolio = BWMMusicProject;
 
 
 //detect when portfolio is clicked
@@ -43,13 +43,13 @@ FourthImage.style.backgroundImage = BWMMusicProject[6];
 const bwmprojectthumb = document.getElementById("bwmmusicpane");
 const ereviveprojectthumb = document.getElementById("erevivepane");
 
-bwmprojectthumb.addEventListener("click", function click() { ChangeElement(BWMMusicProject) })
-ereviveprojectthumb.addEventListener("click", function click() { ChangeElement(EReviveProject) })
+bwmprojectthumb.addEventListener("click", function click() { ChangeElement(BWMMusicProject); })
+ereviveprojectthumb.addEventListener("click", function click() { ChangeElement(EReviveProject); })
+
+
 //function to change portfolio to selected
-
-
-
 function ChangeElement(portfolioSelected) {
+
     projectname.innerHTML = portfolioSelected[0];
     projectinfo.innerHTML = portfolioSelected[1];
     technologiesused.innerHTML = portfolioSelected[2];
@@ -57,10 +57,36 @@ function ChangeElement(portfolioSelected) {
     SecondImage.style.backgroundImage = portfolioSelected[4];
     ThirdImage.style.backgroundImage = portfolioSelected[5];
     FourthImage.style.backgroundImage = portfolioSelected[6];
+    CurrentPortfolio = portfolioSelected;
 }
 
+//code to change image displayed when clicked
+
+//detect when image is clicked
+FirstImage.addEventListener("click", function () { ChangeImage(this.id) })
+SecondImage.addEventListener("click", function () { ChangeImage(this.id) })
+ThirdImage.addEventListener("click", function () { ChangeImage(this.id) })
+FourthImage.addEventListener("click", function () { ChangeImage(this.id) })
 
 
+
+function ChangeImage(imageclicked) {
+    switch (imageclicked) {
+
+        case SecondImage.id:   
+            FirstImage.style.backgroundImage = CurrentPortfolio[4];
+            break;
+        case ThirdImage.id:
+            FirstImage.style.backgroundImage = CurrentPortfolio[5];
+            break;
+        case FourthImage.id:
+            FirstImage.style.backgroundImage = CurrentPortfolio[6];
+            
+            break;
+
+    }
+
+}
 
 
 
