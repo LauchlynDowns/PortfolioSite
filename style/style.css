@@ -25,6 +25,7 @@
     background-color: #0868AC;
     color: white;
 }
+
 .grey {
     background-color: gray;
     color: black;
@@ -34,10 +35,12 @@
     background-color: #4f5b93;
     color: white;
 }
-.sqlorange{
+
+.sqlorange {
     background-color: #b45e00;
     color: white;
 }
+
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
 * {
@@ -59,7 +62,8 @@
 
 
 body {
-    background-color: #242424;
+    /* background-color: #242424; */
+    background-color: #e2e2e2;
     border: 0;
     margin: 0;
     padding: 0;
@@ -92,7 +96,7 @@ a:active {
 }
 
 i {
-    color: #9C9C9C;
+    color: #2e2e2e;
 }
 
 i:hover {
@@ -108,7 +112,7 @@ i:hover {
     max-height: 100vh;
     width: 100%;
     max-width: 100%;
-    border-bottom: 1px solid white;
+    /* border-bottom: 1px solid white; */
     /*REMOVE LATER!*/
     display: flex;
 }
@@ -132,7 +136,7 @@ i:hover {
 
 .navbar-text {
     max-width: 50vw;
-    color: #C2C2C2;
+    color: #444444;
     font-family: 'PT Sans', sans-serif;
     width: 50vw;
     height: auto;
@@ -166,7 +170,7 @@ i:hover {
     border-radius: 6vh;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: start;
     color: rgb(201, 201, 201);
 }
 
@@ -212,7 +216,8 @@ i:hover {
 .toptext {
     font-family: 'PT Sans', sans-serif;
     font-size: 8vh;
-    color: #cccccc;
+    /* color: #cccccc; */
+    color: #2e2e2e;
     border: 0;
     padding: 0;
     margin: 0;
@@ -234,7 +239,8 @@ i:hover {
 .bottomtext {
     font-family: 'PT Sans', sans-serif;
     font-size: 5vh;
-    color: #C2C2C2;
+    /* color: #C2C2C2; */
+    color: #2e2e2e;
     border: 0;
     padding: 0;
     margin: 0;
@@ -297,7 +303,7 @@ i:hover {
     margin-left: 5vw;
     font-size: 2.5vh;
     font-family: 'PT Sans', sans-serif;
-    color: white;
+    color: #2e2e2e;
 }
 
 .PictureOfMe {
@@ -458,7 +464,7 @@ i:hover {
     border-radius: 25px;
     display: inline-block;
     margin: 1%;
-    
+
 }
 
 
@@ -543,10 +549,7 @@ i:hover {
 
 @media only screen and (max-width: 1200px) {
 
-    .navbar-hideable {
-        display: none;
-    }
-
+  
     .codeshape {
         width: 200vw;
         background-size: 200vh;
@@ -630,7 +633,7 @@ i:hover {
 
     .screenshot-container {
         width: 70%;
-        
+
     }
 
     .projectscontainer {
@@ -640,25 +643,108 @@ i:hover {
     .project-holder {
         height: max-content;
     }
-    .project-selector{
+
+    .project-selector {
         width: 100%;
         margin-left: 0;
         padding-left: 0;
     }
-    .project-selector-overlay{
+
+    .project-selector-overlay {
         width: 100%;
         margin-left: 0px;
         padding-left: 0;
     }
+
     .project-selector-pane {
         width: 40vw;
         min-width: 50vw;
     }
-    .project-selector-overlay{
+
+    .project-selector-overlay {
+        display: none;
+    }
+    .slidebutton{
         display: none;
     }
 }
 
 
+/* code for theme selector */
 
+.slidebutton {
+    position: relative;
+    background-color: #C9C9C9;
+    height: 1.8rem;
+    width: 3rem;
+    border-radius: 3rem;
+    top: 30%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.slidebutton-circle {
+    background-color: #474747;
+    position: absolute;
+    height: 1.3rem;
+    aspect-ratio: 1/1;
+    top: 50%;
+    left: 5%;
+    /* right: 5%; */
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border-radius: 3rem;
+
+}
+
+
+.slidebutton-icons {
+    height: 1.8rem;
+    width: 3rem;
+    border-radius: 3rem;
+
+    position: absolute;
+
+}
+
+.moon {
+    height: 0.9rem;
+    aspect-ratio: 1/1;
+    border-radius: 3rem;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border-radius: 3rem;
+    background-color: #474747;
+}
+
+.moon-shadow {
+    background-color: #C9C9C9;
+    height: 0.9rem;
+    aspect-ratio: 1/1;
+    top: 45%;
+    right: 0;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border-radius: 3rem;
+    position: absolute;
+    overflow: hidden;
+
+}
+
+.sun {
+    color: 474747;
+    height: 1.2rem;
+    width: 0.9rem;
+    font-size: 1rem;
+    top: 50%;
+    position: absolute;
+    left: 10%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #474747;
+}
 
