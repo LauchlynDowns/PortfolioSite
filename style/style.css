@@ -541,15 +541,113 @@ i:hover {
     background-position: center;
 }
 
+.contact {
+    display: flex;
+
+    justify-content: center;
+}
+
+.contactcard {
+
+    width: 70%;
+    height: 70%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
 
 
 
+}
+
+.contactcard-pan {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 50%;
+    transform: translateY(-25%);
+    font-family: 'pt-sans', sans-serif;
+
+}
+
+
+
+
+
+
+
+/* form css */
+.formcontainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 20px;
+    font-size: 150%;
+}
+
+.emailinput {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.emailfield {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.nameinput {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.namefield {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.contactinput {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.contactfield {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.messageinput {
+    grid-area: 4 / 1 / 5 / 2;
+}
+
+.messagefield {
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+.submitbutton {
+    grid-area: 5 / 1 / 6 / 3;
+
+
+}
+
+.submitbutton:only-child {
+    width: 70%;
+    height: 60%;
+    font-size: large;
+}
+
+.forminput {
+    background-color: #C4C4C4;
+    border: 0;
+    height: 100%;
+    width: 150%;
+}
+
+.bigforminput {
+    height: 120%;
+}
 
 /*responsive code*/
 
 @media only screen and (max-width: 1200px) {
 
-  
+
     .codeshape {
         width: 200vw;
         background-size: 200vh;
@@ -664,8 +762,28 @@ i:hover {
     .project-selector-overlay {
         display: none;
     }
-    .slidebutton{
+
+    .slidebutton {
         display: none;
+    }
+
+    .contactcard {
+        flex-direction: column;
+        height: 80%;
+        width: 90%;
+        max-width: 100vw;
+    }
+
+    .contactcard-pan {
+        width: 100%;
+        height: 100%;
+        max-width: 100vw;
+
+    }
+
+    .contact-link {
+        max-width: 100vw;
+        font-size: 26px;
     }
 }
 
@@ -747,4 +865,3 @@ i:hover {
     transform: translateY(-50%);
     color: #474747;
 }
-

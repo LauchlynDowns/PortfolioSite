@@ -105,6 +105,8 @@ const middletext = document.getElementById("middletext")
 const bottomtext = document.getElementById("bottomtext")
 const sociallinks = document.getElementById("sociallinks")
 const infotext = document.getElementById("about-info-area")
+const form = document.getElementById("formcontainer");
+const contactInfo = document.getElementById("contactcard")
 function changeTheme() {
     if (dark == true) {
         changeLight();
@@ -121,6 +123,8 @@ function changeDark() {
     middletext.style.color = "white"
     bottomtext.style.color = "white"
     infotext.style.color = "white"
+    form.style.color = "white"
+    contactInfo.style.color = "white"
 }
 
 function changeLight() {
@@ -132,6 +136,8 @@ function changeLight() {
     bottomtext.style.color = "#2e2e2e"
     toptext.style.color = "#2e2e2e"
     infotext.style.color = "#2e2e2e"
+    form.style.color = "#2e2e2e"
+    contactInfo.style.color = "#2e2e2e"
 }
 
 
