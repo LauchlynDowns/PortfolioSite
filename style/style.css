@@ -68,10 +68,15 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+   
+
 }
+
+
 
 html {
     scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
 }
 
 /*resets for links*/
@@ -115,6 +120,7 @@ i:hover {
     /* border-bottom: 1px solid white; */
     /*REMOVE LATER!*/
     display: flex;
+    scroll-snap-align: start;
 }
 
 
